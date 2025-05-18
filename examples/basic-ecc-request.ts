@@ -17,7 +17,11 @@ async function basicRequestExample() {
   try {
     logger.info('executing query by path');
     const result = await client.query.exec(
-      '/api/v4/query/8a09296e3cc3f56ec615ba541664f517'
+      '/api/v4/query/8a09296e3cc3f56ec615ba541664f517',
+      [
+        { name: 'cpf', value: '12345678901' },
+        { name: 'name', value: 'John Doe' }
+      ]
     );
 
     logger.info({
