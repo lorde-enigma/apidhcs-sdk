@@ -1,0 +1,5 @@
+node_modules
+.env
+dist
+src/main/test.ts
+results

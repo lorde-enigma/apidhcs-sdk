@@ -1,0 +1,38 @@
+{
+  "name": "datahunter",
+  "version": "1.0.0",
+  "description": "Modulo para implementacao do datahunter",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf lib && tsc -p tsconfig-build.json && tscpaths -p tsconfig.json -s ./src -o ./lib",
+    "example": "ts-node -r tsconfig-paths/register examples/index",
+    "lint": "eslint --ext .ts src",
+    "lint:fix": "eslint --ext .ts src --fix",
+    "test:unit": "npm test -- --watch -c jest-unit-config.js",
+    "test:staged": "npm test -- --findRelatedTests",
+    "test:ci": "npm test -- --coverage"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "pino": "^9.6.0",
+    "pino-pretty": "^13.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.49.0",
+    "eslint-config-standard-with-typescript": "^39.1.1",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-n": "^16.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.7",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "tscpaths": "^0.0.9",
+    "typescript": "^5.4.5"
+  }
+}

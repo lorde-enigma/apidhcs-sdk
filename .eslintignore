@@ -1,0 +1,11 @@
+jest.config.ts
+jest-unit-config.ts
+tests
+node_modules
+dist
+coverage
+requirements
+.vscode
+tests-integration
+examples
+index.js
