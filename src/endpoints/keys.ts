@@ -1,4 +1,4 @@
-import { type DataHunterClient } from '@/client/dataHunter-client'
+import { type DataHunterClient } from '@/client'
 import { logger } from '@/utils/logger'
 
 /**

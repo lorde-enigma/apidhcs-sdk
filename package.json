@@ -11,6 +11,7 @@
     "example": "ts-node -r tsconfig-paths/register examples/index",
     "lint": "eslint --ext .ts src",
     "lint:fix": "eslint --ext .ts src --fix",
+    "test": "jest --passWithNoTests --no-cache",
     "test:unit": "npm test -- --watch -c jest-unit-config.js",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage"

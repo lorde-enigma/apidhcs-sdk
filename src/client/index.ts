@@ -1,1 +1,1 @@
-export * from './dataHunter-client'
+export * from './dh-client'
