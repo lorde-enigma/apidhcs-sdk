@@ -6,8 +6,11 @@ import { logger } from '../src/utils/logger';
  */
 async function keyManagementExample() {
   logger.info('initializing datahunter client');
-  const client = new DataHunterClient('https://api-dh.ciphers.systems', {
-    logLevel: 'debug'
+  const client = new DataHunterClient({
+    baseUrl: 'https://api-dh.ciphers.systems',
+    options: {
+      logLevel: 'debug'
+    }
   });
   
   try {

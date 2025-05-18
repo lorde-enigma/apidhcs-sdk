@@ -1,7 +1,7 @@
 {
   "name": "datahunter",
   "version": "1.0.0",
-  "description": "Modulo para implementacao do datahunter",
+  "description": "datahunter module",
   "license": "ISC",
   "author": "",
   "type": "commonjs",

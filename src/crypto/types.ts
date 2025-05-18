@@ -44,8 +44,6 @@ export interface RequestData {
   apikey?: string
   /** query parameters */
   parameters?: QueryParameter[]
-  /** query name (for name-based queries) */
-  queryName?: string
   /** additional fields */
   [key: string]: any
 }

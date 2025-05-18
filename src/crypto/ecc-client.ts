@@ -293,12 +293,6 @@ export class ECCClient {
       const endTime = Date.now()
       const duration = (endTime - startTime) / 1000
 
-      // check response
-      if (!response.ok) {
-        const errorText = await response.text()
-        throw new Error(`error ${response.status}: ${errorText}`)
-      }
-
       // process response
       const responseText = await response.text()
 

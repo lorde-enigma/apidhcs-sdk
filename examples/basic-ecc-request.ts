@@ -6,28 +6,26 @@ import { logger } from '../src/utils/logger';
  */
 async function basicRequestExample() {
   logger.info('initializing datahunter client');
-  const client = new DataHunterClient('https://api-dh.ciphers.systems', {
-    logLevel: 'debug',
-    saveResponses: true
+  const client = new DataHunterClient({
+    baseUrl: 'https://api-dh.ciphers.systems',
+    options: {
+      logLevel: 'debug'
+    },
+    apiKey: 'api-key'
   });
-  
+
   try {
-    logger.info('executing query by id');
-    const result = await client.query.executeById(
-      '5a03296e37c3f56ec603ba541664f217',
-      [
-        { name: 'cpf', value: '12345678901' },
-        { name: 'name', value: 'John Doe' }
-      ],
-      'your-api-key-here'
+    logger.info('executing query by path');
+    const result = await client.query.exec(
+      '/api/v4/query/8a09296e3cc3f56ec615ba541664f517'
     );
-    
+
     logger.info({
       status: result.status,
       duration: `${result.duration.toFixed(3)}s`,
       filePath: result.filePath
     }, 'query completed successfully');
-    
+
     if (result.responseData) {
       logger.debug(result.responseData, 'query response data');
     }
