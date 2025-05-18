@@ -1,7 +1,7 @@
 {
   "name": "datahunter",
-  "version": "1.0.0",
-  "description": "datahunter module",
+  "version": "1.0.1",
+  "description": "a secure typescript client for interacting with the datahunter api, featuring end-to-end encryption using elliptic curve cryptography (ecc).",
   "license": "ISC",
   "author": "",
   "type": "commonjs",
