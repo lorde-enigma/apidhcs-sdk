@@ -17,8 +17,8 @@ npm install github:lorde-enigma/apidhcs-sdk
 
 ## quick start
 ```ts
-import DataHunterClient from 'datahunter';
-import { logger } from 'datahunter/utils/logger';
+import DataHunterClient from 'apidhcs-sdk';
+import { logger } from 'apidhcs-sdk/utils/logger';
 
 async function quickExample() {
   // initialize the client
