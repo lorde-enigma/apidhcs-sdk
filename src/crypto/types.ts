@@ -14,8 +14,6 @@ export interface ECCClientOptions {
  * response from a request
  */
 export interface RequestResponse<T = any> {
-  /** http status code */
-  status: number
   /** request duration in seconds */
   duration: number
   /** response data (if json or decrypted data) */

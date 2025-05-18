@@ -306,20 +306,17 @@ export class ECCClient {
           const decryptedData = this.decrypt<T>(responseData.ENC)
 
           return {
-            status: response.status,
             duration,
-            responseData: decryptedData
-          }
+            ...decryptedData
+          } satisfies RequestResponse<T>
         }
 
         return {
-          status: response.status,
           duration,
           responseData: responseData as T
         }
       } catch (e) {
         return {
-          status: response.status,
           duration,
           responseText
         }
