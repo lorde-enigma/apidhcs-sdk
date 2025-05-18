@@ -8,6 +8,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rimraf lib && tsc -p tsconfig-build.json && tscpaths -p tsconfig.json -s ./src -o ./lib",
+    "install": "build",
     "example": "ts-node -r tsconfig-paths/register examples/index",
     "lint": "eslint --ext .ts src",
     "lint:fix": "eslint --ext .ts src --fix",
