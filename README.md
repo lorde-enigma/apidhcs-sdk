@@ -11,11 +11,12 @@ a secure typescript client for interacting with the datahunter api, featuring en
 - detailed logging: configurable logging levels for debugging
 
 ## installation
-
-npm install datahunter
+```shell
+npm install github:lorde-enigma/apidhcs-sdk
+```
 
 ## quick start
-
+```ts
 import DataHunterClient from 'datahunter';
 import { logger } from 'datahunter/utils/logger';
 
@@ -52,7 +53,7 @@ async function quickExample() {
     logger.error({ error: (error as Error).message }, 'Request failed');
   }
 }
-
+```
 ## architecture
 
 the datahunter client is built with a focus on security, using elliptic curve cryptography to ensure that data is securely transmitted. the architecture includes:
@@ -65,7 +66,7 @@ the datahunter client is built with a focus on security, using elliptic curve cr
 ## client configuration
 
 the client accepts the following configuration options:
-
+```ts
 interface DataHunterClientOptions {
   // directory to save query results
   resultsDir?: string;
@@ -138,21 +139,23 @@ const client = new DataHunterClient({
     resultsDir: './my-results'
   }
 });
+```
 
 ## development
 
 ### building the project
-
+```shell
 npm run build
+```
 
 ### running tests
-
+```shell
 npm run test
-
+```
 ### running examples
-
+```shell
 npm run example
+```
 
 ## license
-
-ISC
+this project is licensed under the mit license. see the [LICENSE](LICENSE) file for details.
